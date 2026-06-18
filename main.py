@@ -15,6 +15,8 @@ with open(os.path.join(BASE, "model.pkl"), "rb") as f:
     model = pickle.load(f)
 with open(os.path.join(BASE, "tfidf.pkl"), "rb") as f:
     tfidf = pickle.load(f)
+print("TFIDF TYPE:", type(tfidf))
+print("HAS IDF:", hasattr(tfidf, "idf_"))
 with open(os.path.join(BASE, "encoder.pkl"), "rb") as f:
     encoder = pickle.load(f)
 
