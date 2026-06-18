@@ -23,10 +23,8 @@ app = FastAPI(title="ResumeIQ API", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "https://resume-nnxp.onrender.com"
-    ],
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
